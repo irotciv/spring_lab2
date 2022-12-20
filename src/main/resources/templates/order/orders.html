@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders</title>
+</head>
+<body>
+<tr th:each="order : ${orders}">
+    <td th:text="${order.id}"></td>
+    <td th:text="${order.user.firstName}"></td>
+    <td th:text="${order.user.lastName}"></td>
+<!--<tr th:each="menuItem : order.menuItems">-->
+    <td th:text="${order.menuItems.name}"></td>
+<!--</tr>-->
+<td th:text="${order.menuItems.price}"></td>
+<br>
+</tr>
+</body>
+</html>
